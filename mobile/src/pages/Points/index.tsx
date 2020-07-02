@@ -7,9 +7,7 @@ import {
   Image,
   SafeAreaView,
   Alert,
-  Route,
 } from "react-native";
-import Constants from "expo-constants";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Feather as Icon } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -64,7 +62,6 @@ const Points = () => {
 
       const location = await Location.getCurrentPositionAsync();
       const { latitude, longitude } = location.coords;
-      // console.log(latitude, longitude);
       setInitialPosition([latitude, longitude]);
     }
     loadPosition();
@@ -122,7 +119,6 @@ const Points = () => {
           {initialPosition[0] !== 0 && (
             <MapView
               style={styles.map}
-              //   loadingEnabled={initialPosition[0] === 0}
               initialRegion={{
                 latitude: initialPosition[0],
                 longitude: initialPosition[1],

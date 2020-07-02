@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import { StatusBar } from "react-native";
 import Routes from "./src/routes";
 import { AppLoading } from "expo";
 import { Roboto_400Regular, Roboto_500Medium } from "@expo-google-fonts/roboto";
@@ -17,6 +17,7 @@ export default function App() {
   }
 
   return (
+    // fragment
     <>
       <StatusBar
         barStyle="dark-content"

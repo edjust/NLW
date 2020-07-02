@@ -8,7 +8,6 @@ import {
   SafeAreaView,
   Linking,
 } from "react-native";
-import Constants from "expo-constants";
 import { Feather as Icon, FontAwesome } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { RectButton } from "react-native-gesture-handler";
@@ -60,7 +59,7 @@ const Detail = () => {
 
   function handleWhatsapp() {
     Linking.openURL(
-      `whatsapp://send?phone=${data.point.whatsapp}&text=Tenho interesse sobre coelta de resíduos`
+      `whatsapp://send?phone=${data.point.whatsapp}&text=Tenho interesse sobre coleta de resíduos`
     );
   }
 
@@ -156,7 +155,6 @@ const styles = StyleSheet.create({
     borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: "#999",
     paddingVertical: 20,
-    paddingBottom: 10,
     paddingHorizontal: 32,
     flexDirection: "row",
     justifyContent: "space-between",

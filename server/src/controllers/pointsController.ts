@@ -4,7 +4,6 @@ import { Request, Response } from "express";
 class PointControllers {
   async index(request: Request, response: Response) {
     const { city, uf, items } = request.query;
-    //console.log({ city, uf, items });
 
     const parsedItems = String(items)
       .split(",")

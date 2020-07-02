@@ -3,14 +3,13 @@ import "./styles.css";
 import logo from "../../assets/logo.svg";
 import { Link, useHistory } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
-import Home from "../Home";
 import { Map, TileLayer, Marker } from "react-leaflet";
 import api from "../../services/api";
 import axios from "axios";
 import { LeafletMouseEvent } from "leaflet";
 import Dropzone from "../../components/Dropzone";
 
-// array ou objeto: manualmente informar o tipo da variavel
+// estado para array ou objeto: manualmente informar o tipo da variavel
 
 interface Item {
   id: number;
@@ -202,6 +201,7 @@ const CreatePoint = () => {
             </div>
           </div>
         </fieldset>
+
         <fieldset>
           <legend>
             <h2>Endereço</h2>

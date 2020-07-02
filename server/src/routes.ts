@@ -1,11 +1,10 @@
 import express from "express";
-import multe from "multer";
+import multer from "multer";
 import multerConfig from "./config/multer";
 import { celebrate, Joi } from "celebrate";
 
 import PointsController from "./controllers/pointsController";
 import ItemsController from "./controllers/itemsController";
-import multer from "multer";
 
 const routes = express.Router();
 const upload = multer(multerConfig);
@@ -36,6 +35,7 @@ routes.post(
       abortEarly: false,
     }
   ),
+
   pointsController.create
 );
 
